@@ -3,12 +3,14 @@
 Projeto desenvolvido para praticar conceitos de HTML, CSS e JavaScript, aplicados em uma aplicação simples e funcional.
 
 ## 📂 Estrutura do Projeto
+´´´
 Recrutingday2/
 │── index.html      # Página principal
 │── style.css       # Estilos da aplicação
 │── script.js       # Lógica em JavaScript
 │── readme.md       # Documentação do projeto
 
+´´´
 ## ⚙️ Funcionalidades
 
 HTML: Estrutura da interface da aplicação.
