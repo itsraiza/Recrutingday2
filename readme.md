@@ -1,82 +1,65 @@
+# Recrutingday2
+
+Projeto desenvolvido para praticar conceitos de HTML, CSS e JavaScript, aplicados em uma aplicação simples e funcional.
+
+## 📂 Estrutura do Projeto
+Recrutingday2/
+│── index.html      # Página principal
+│── style.css       # Estilos da aplicação
+│── script.js       # Lógica em JavaScript
+│── readme.md       # Documentação do projeto
+
+## ⚙️ Funcionalidades
+
+HTML: Estrutura da interface da aplicação.
+
+CSS: Estilização para tornar a página responsiva e agradável visualmente.
+
+JavaScript: Funções para cálculos, validações e manipulação de dados.
+
+## 🚀 Como Executar
+
+Baixe ou clone este repositório:
+
+git clone https://github.com/seu-usuario/recrutingday2.git
+
+
+Abra o arquivo index.html em qualquer navegador moderno.
+
+A aplicação estará pronta para uso.
+
+## 📜 Scripts Principais (script.js)
+
 1. CalcularJurosComposto(principal, taxa, tempo)
 
-Calcula o juros composto de um valor principal.
-
-Parâmetros:
-
-principal → Valor inicial (número)
-
-taxa → Taxa de juros por período (em decimal, ex: 5% = 0.05)
-
-tempo → Número de períodos (número)
-
-Retorno: Valor final após aplicação do juros composto.
-
-Exemplo:
-
-console.log(CalcularJurosComposto(100, 0.05, 12)); // 179.585...
+Calcula o valor final de um investimento aplicando juros compostos.
 
 2. validarCarteira(endereco)
 
-Valida se um endereço de carteira atende ao padrão esperado (26 a 35 caracteres alfanuméricos).
-
-Parâmetros:
-
-endereco → String representando o endereço da carteira
-
-Retorno: true se válido, false caso contrário.
-
-Exemplo:
-
-const endereco = "1AbCdEfGh12345678901234567";
-console.log(validarCarteira(endereco)); // true
+Valida se um endereço de carteira possui entre 26 e 35 caracteres alfanuméricos.
 
 3. ordernaTransacoes(transacoes)
 
 Ordena uma lista de transações pelo valor em ordem decrescente.
 
-Parâmetros:
-
-transacoes → Array de objetos com { endereco, valor }
-
-Retorno: Array ordenado.
-
-Exemplo:
-
-const lista = [
-  {endereco:"1AbCdEfGh12345678901234567", valor: 250},
-  {endereco:"3XyZ98765432109876543210987", valor: 500},
-];
-
-console.log(ordernaTransacoes(lista));
-/*
-[
-  {endereco: "3XyZ98765432109876543210987", valor: 500},
-  {endereco: "1AbCdEfGh12345678901234567", valor: 250}
-]
-*/
-
 4. verificarSenha(senha)
 
-Verifica a força de uma senha baseada nos seguintes critérios:
+Verifica a força de uma senha com base em critérios de segurança.
 
-Mínimo de 8 caracteres
+## 🖼️ Exemplo de Uso
+console.log(CalcularJurosComposto(100, 0.05, 12));
+// → 179.585...
 
-Contém pelo menos 1 letra maiúscula
+console.log(validarCarteira("1AbCdEfGh12345678901234567"));
+// → true
 
-Contém pelo menos 1 letra minúscula
+console.log(verificarSenha("Abc123!@"));
+// → Senha forte ✅
 
-Contém pelo menos 1 número
+## 💡 Tecnologias Utilizadas
 
-Contém pelo menos 1 caractere especial (!@#$%^&*(),.?":{}|<>)
+HTML5
 
-Parâmetros:
+CSS3
 
-senha → String da senha a ser verificada
-
-Retorno: Mensagem indicando se a senha é forte ou fraca.
-
-Exemplo:
-
-console.log(verificarSenha("Abc123!@")); // Senha forte ✅
-console.log(verificarSenha("abc123"));   // Senha fraca ❌
+JavaScript
