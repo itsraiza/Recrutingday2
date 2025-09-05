@@ -1,9 +1,7 @@
-function CalcularJurosComposto(principal, taxa, tempo) {
+function CalcularJuros(principal, taxa, tempo) {
     return principal * Math.pow(1+ taxa, tempo);
 
 }
-
-console.log(CalcularJurosComposto(100, 0.05,12));
 
 function validarCarteira(endereco) {
     const regex = /[a-zA-Z0-9]{26,35}$/;
@@ -19,10 +17,6 @@ const lista = [
     {endereco: "3XyZ98765432109876543210987", valor: 500},
 ];
 
-console.log(validarCarteira(lista[0].endereco));
-
-console.log(ordernaTransacoes(lista));
-
 function verificarSenha(senha) {
   const minLength = senha.length >= 8;
   const temMaiuscula = /[A-Z]/.test(senha);
@@ -37,6 +31,23 @@ function verificarSenha(senha) {
   }
 }
 
-// Exemplo:
-console.log(verificarSenha("Abc123!@")); // Senha forte ✅
-console.log(verificarSenha("abc123"));   // Senha fraca ❌
+
+document.getElementById("btnJuros").addEventListener("click", () => {
+  const p = parseFloat(document.getElementById("p").value);
+  const i = parseFloat(document.getElementById("i").value);
+  const n = parseInt(document.getElementById("n").value);
+  const resultado = CalcularJuros(p, i, n);
+  document.getElementById("outJuros").textContent = `Resultado: ${resultado.toFixed(2)}`;
+});
+
+document.getElementById("btnValidar").addEventListener("click", () => {
+  const endereco = document.getElementById("addr").value;
+  const valido = validarCarteira(endereco);
+  document.getElementById("outAddr").textContent = valido ? "Carteira válida ✅" : "Carteira inválida ❌";
+});
+
+document.getElementById("btnSenha").addEventListener("click", () => {
+  const senha = document.getElementById("pwd").value;
+  const avaliacao = verificarSenha(senha);
+  document.getElementById("outPwd").textContent = avaliacao;
+});
