@@ -34,21 +34,23 @@ A aplicação estará pronta para uso.
 
 ## 📜 Scripts Principais (script.js)
 
-- 1. CalcularJurosComposto(principal, taxa, tempo)
+```
+1. CalcularJurosComposto(principal, taxa, tempo)
 
 Calcula o valor final de um investimento aplicando juros compostos.
 
-- 2. validarCarteira(endereco)
+2. validarCarteira(endereco)
 
 Valida se um endereço de carteira possui entre 26 e 35 caracteres alfanuméricos.
 
-- 3. ordernaTransacoes(transacoes)
+3. ordernaTransacoes(transacoes)
 
 Ordena uma lista de transações pelo valor em ordem decrescente.
 
-- 4. verificarSenha(senha)
+4. verificarSenha(senha)
 
 Verifica a força de uma senha com base em critérios de segurança.
+```
 
 ## 🖼️ Exemplo de Uso
 ```
